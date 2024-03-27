@@ -1,6 +1,6 @@
 # Folder
 hugging_face_model_downloaded
-artifacts/*
+artifacts/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
