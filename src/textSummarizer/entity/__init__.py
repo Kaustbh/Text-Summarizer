@@ -14,13 +14,13 @@ class DataValidationConfig:
     STATUS_FILE: str
     ALL_REQUIRED_FILES: list
 
-@dataclass
+@dataclass(frozen=True)
 class DataTransformationConfig:
     root_dir: Path
     data_path: Path
     tokenizer_name: Path
 
-@dataclass
+@dataclass(frozen=True)
 class ModelTrainerConfig:
     root_dir: Path
     data_path: Path
@@ -34,3 +34,11 @@ class ModelTrainerConfig:
     eval_steps: int
     save_steps: float
     gradient_accumulation_steps: int
+
+@dataclass(frozen=True)
+class ModuleEvaluationConfig:
+    root_dir: Path
+    data_path: Path
+    model_path: Path
+    tokenizer_path: Path
+    metric_file_name: Path
